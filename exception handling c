@@ -1,0 +1,44 @@
+Write a C++ program to throw multiple exceptions and define
+multiple catch statements.
+Code:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int choice;
+do
+{
+try
+{
+cout <<"\n1.Exception on int data type\n";
+cout <<"2.Exception on double data type\n";
+
+cout <<"3.Exception on char data type\n";
+cout <<"4.Exit\n";
+cout <<"Enter your choice : ";
+cin>>choice;
+switch(choice)
+{
+case 1:throw (11);
+case 2:throw(11.2);
+case 3:throw('A');
+}
+}
+catch(int a)
+{
+cout << "Integer exception "<<a<<endl;
+}
+
+catch(double b)
+{
+cout <<"Double exception "<<b<<endl;
+}
+
+catch(char c)
+{
+cout <<"Char exception "<<c<<endl;
+
+}
+}while(choice!=4);
+}
